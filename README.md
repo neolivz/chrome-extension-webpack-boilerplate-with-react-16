@@ -74,6 +74,9 @@ and on your `src/manifest.json`:
 ## Packing
 After the development of your extension run the command
 
+## Testing
+This boilerplate supports testing with [Jest](https://facebook.github.io/jest/) and [Enzyme](https://github.com/airbnb/enzyme).
+
 ```
 $ NODE_ENV=production npm run build
 ```

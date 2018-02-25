@@ -12,7 +12,7 @@ class Greetings extends Component {
     return (
       <div className="Greetings">
         <h1>{this.state.greetings}</h1>
-        <h3>This extension is built using React 16+</h3>
+        <h3>This extension is built using React <span>{this.props.reactVersion}</span></h3>
         <h3>Enjoy!</h3>
         <img src={icon} alt="icon"/>
       </div>

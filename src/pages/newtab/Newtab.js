@@ -8,7 +8,7 @@ class Newtab extends Component {
   render () {
     return (
       <Aux>
-        <Greetings />
+        <Greetings reactVersion="16+" />
       </Aux>
     );
   }
