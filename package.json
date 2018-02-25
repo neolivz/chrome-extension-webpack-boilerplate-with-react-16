@@ -7,24 +7,35 @@
     "start": "node utils/webserver.js"
   },
   "dependencies": {
-    "react": "^15.3.2",
-    "react-dom": "^15.3.2"
+    "axios": "^0.18.0",
+    "bootstrap": "^4.0.0",
+    "jquery": "^3.3.1",
+    "lodash": "^4.17.5",
+    "popper.js": "^1.12.9",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-redux": "^5.0.7",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
+    "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0",
+    "w3-css": "^4.0.4"
   },
   "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-react-hmre": "^1.1.1",
     "clean-webpack-plugin": "^0.1.17",
     "copy-webpack-plugin": "^4.2.0",
-    "style-loader": "^0.13.0",
-    "webpack": "2.2.1",
-    "webpack-dev-server": "^2.3.0",
-    "write-file-webpack-plugin": "3.4.2",
-    "babel-core": "^6.17.0",
-    "babel-loader": "^6.2.4",
-    "babel-preset-react": "^6.16.0",
-    "babel-preset-react-hmre": "^1.1.1",
     "css-loader": "^0.25.0",
-    "file-loader": "^0.11.2",
+    "file-loader": "^1.1.9",
     "fs-extra": "^0.30.0",
     "html-loader": "^0.4.5",
-    "html-webpack-plugin": "2.24.1"
+    "html-webpack-plugin": "^2.30.1",
+    "style-loader": "^0.20.2",
+    "webpack": "^3.11.0",
+    "webpack-dev-server": "^2.11.1",
+    "write-file-webpack-plugin": "^4.2.0"
   }
 }

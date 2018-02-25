@@ -1,22 +1,24 @@
-# Chrome Extension Webpack Boilerplate
+# Chrome Extension Webpack Boilerplate (with React 16+)
 
-A basic foundation boilerplate for rich Chrome Extensions using [Webpack](https://webpack.github.io/) to help you write modular and modern Javascript code, load CSS easily and [automatic reload the browser on code changes](https://webpack.github.io/docs/webpack-dev-server.html#automatic-refresh).
+
+***This boilerplate is React-enabled***
+
+
+A basic foundation boilerplate for rich Chrome Extensions using [Webpack](https://webpack.github.io/) and [React.js](https://facebook.github.io/react/) to help you write modular and modern Javascript code, load CSS easily and [automatic reload the browser on code changes](https://webpack.github.io/docs/webpack-dev-server.html#automatic-refresh).
 
 ## Developing a new extension
 _I'll assume that you already read the [Webpack docs](https://webpack.github.io/docs) and the [Chrome Extension](https://developer.chrome.com/extensions/getstarted) docs._
 
 1. Clone the repository.
-2. Install [yarn](https://yarnpkg.com): `npm install -g yarn`.
-3. Run `yarn`.
-4. Change the package's name and description on `package.json`.
-5. Change the name of your extension on `src/manifest.json`.
-6. Run `npm run start`
-7. Load your extension on Chrome following:
+2. Change the package's name and description on `package.json`.
+3. Change the name of your extension on `src/manifest.json`.
+4. Run `npm run start`
+5. Load your extension on Chrome following:
     1. Access `chrome://extensions/`
     2. Check `Developer mode`
     3. Click on `Load unpacked extension`
     4. Select the `build` folder.
-8. Have fun.
+6. Have fun.
 
 ## Structure
 All your extension's development code must be placed in `src` folder, including the extension manifest.
@@ -96,8 +98,3 @@ ApiCall({ key: secrets.key });
 ```
 :point_right: The files with name `secrets.*.js` already are ignored on the repository.
 
-## With React.js
-:bulb: If you want use [React.js](https://facebook.github.io/react/) with this boilerplate, check the **[react branch](https://github.com/samuelsimoes/chrome-extension-webpack-boilerplate/tree/react)**.
-
--------------
-Samuel Simões ~ [@samuelsimoes](https://twitter.com/samuelsimoes) ~ [Blog](http://blog.samuelsimoes.com/)
