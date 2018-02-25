@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 var webpack = require("webpack"),
     path = require("path"),
     fileSystem = require("fs"),
@@ -20,9 +22,10 @@ if (fileSystem.existsSync(secretsPath)) {
 
 var options = {
   entry: {
-    popup: path.join(__dirname, "src", "js", "popup.js"),
-    options: path.join(__dirname, "src", "js", "options.js"),
-    background: path.join(__dirname, "src", "js", "background.js")
+    popup: path.join(__dirname, "src", "pages", "popup", "index.js"),
+    options: path.join(__dirname, "src", "pages", "options","options.js"),
+    background: path.join(__dirname, "src", "pages", "background","background.js"),
+    newtab: path.join(__dirname, "src", "pages", "newtab","index.js")
   },
   output: {
     path: path.join(__dirname, "build"),
@@ -32,8 +35,7 @@ var options = {
     rules: [
       {
         test: /\.css$/,
-        loader: "style-loader!css-loader",
-        exclude: /node_modules/
+        loader: "style-loader!css-loader"
       },
       {
         test: new RegExp('\.(' + fileExtensions.join('|') + ')$'),
@@ -75,19 +77,24 @@ var options = {
       }
     }]),
     new HtmlWebpackPlugin({
-      template: path.join(__dirname, "src", "popup.html"),
+      template: path.join(__dirname, "src", "pages", "popup", "index.html"),
       filename: "popup.html",
       chunks: ["popup"]
     }),
     new HtmlWebpackPlugin({
-      template: path.join(__dirname, "src", "options.html"),
+      template: path.join(__dirname, "src", "pages", "options", "options.html"),
       filename: "options.html",
       chunks: ["options"]
     }),
     new HtmlWebpackPlugin({
-      template: path.join(__dirname, "src", "background.html"),
+      template: path.join(__dirname, "src", "pages", "background", "background.html"),
       filename: "background.html",
       chunks: ["background"]
+    }),
+    new HtmlWebpackPlugin({
+      template: path.join(__dirname, "src", "pages", "newtab", "index.html"),
+      filename: "newtab.html",
+      chunks: ["newtab"]
     }),
     new WriteFilePlugin()
   ]
