@@ -1,7 +1,7 @@
 {
-  "name": "chrome-extension-webpack",
+  "name": "coinspot-csv-exporter",
   "version": "0.0.1",
-  "description": "A boilerplate to chrome extension with webpack",
+  "description": "A chrome extension to export csv from coinspot in the format of delta app",
   "scripts": {
     "build": "node utils/build.js",
     "start": "node utils/webserver.js",
@@ -12,14 +12,18 @@
     "bootstrap": "^4.0.0",
     "jquery": "^3.3.1",
     "lodash": "^4.17.5",
+    "moment": "^2.22.1",
+    "papaparse": "^4.4.0",
     "popper.js": "^1.12.9",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-redux": "^5.0.7",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
+    "react-toolbox": "^2.0.0-beta.12",
     "redux": "^3.7.2",
     "redux-thunk": "^2.2.0",
+    "styled-components": "^3.2.6",
     "w3-css": "^4.0.4"
   },
   "devDependencies": {

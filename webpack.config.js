@@ -25,17 +25,26 @@ var options = {
     popup: path.join(__dirname, "src", "pages", "popup", "index.js"),
     options: path.join(__dirname, "src", "pages", "options","options.js"),
     background: path.join(__dirname, "src", "pages", "background","background.js"),
-    newtab: path.join(__dirname, "src", "pages", "newtab","index.js")
+    coinspot: path.join(__dirname, "src", "pages", "content","coinspot.js")
   },
   output: {
     path: path.join(__dirname, "build"),
-    filename: "[name].bundle.js"
+    filename: "[name].js"
   },
   module: {
     rules: [
       {
         test: /\.css$/,
-        loader: "style-loader!css-loader"
+        use: [
+          require.resolve('style-loader'),
+          {
+            loader: require.resolve('css-loader'),
+            options: {
+              importLoaders: 1,
+              modules: true,
+            },
+          },
+        ]
       },
       {
         test: new RegExp('\.(' + fileExtensions.join('|') + ')$'),
@@ -90,11 +99,6 @@ var options = {
       template: path.join(__dirname, "src", "pages", "background", "background.html"),
       filename: "background.html",
       chunks: ["background"]
-    }),
-    new HtmlWebpackPlugin({
-      template: path.join(__dirname, "src", "pages", "newtab", "index.html"),
-      filename: "newtab.html",
-      chunks: ["newtab"]
     }),
     new WriteFilePlugin()
   ]

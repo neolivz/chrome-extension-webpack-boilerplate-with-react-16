@@ -1,5 +1,5 @@
 {
-  "name": "Chrome Extension Webpack",
+  "name": "Coinspot CSV exporter",
   "options_page": "options.html",
   "background": {
     "page": "background.html"
@@ -8,9 +8,14 @@
     "default_popup": "popup.html",
     "default_icon": "icon-34.png"
   },
-  "chrome_url_overrides": {
-      "newtab": "newtab.html"
-  },
+  "content_scripts": [{
+    "matches": [
+        "https://www.coinspot.com.au/my/orders/history"
+        ],
+    "js": ["coinspot.js"],
+    "run_at": "document_end"
+    }
+], 
   "icons": {
     "128": "icon-128.png"
   },
@@ -18,7 +23,9 @@
     "tabs",
     "activeTab",
     "<all_urls>",
-    "background"
+    "background",
+    "http://*/*",
+    "https://*/*"
   ],
   "manifest_version": 2,
   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
